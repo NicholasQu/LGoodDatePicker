@@ -773,6 +773,10 @@ public class CalendarPanel extends JPanel {
                     settings.getColor(DateArea.CalendarBorderSelectedDate)));
         }
 
+        //NicholasQu Fix Issue in Mac
+        //https://github.com/LGoodDatePicker/LGoodDatePicker/issues/61
+        this.repaint();
+
         // If needed, draw the week numbers.
         boolean showWeekNumbers = settings.getWeekNumbersDisplayed();
         int usedRowCount = firstDateInEachUsedRow.size();
